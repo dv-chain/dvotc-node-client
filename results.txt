@@ -1,0 +1,565 @@
+$ node example.js 
+Using environment url as  https://sandbox.trade.dvchain.co
+======V5 GET QUOTE=======
+https://sandbox.trade.dvchain.co/api/v5/RFQ?side=Buy&qty=0.100005&asset=BTC&counterAsset=USD
+{
+  asset: 'BTC',
+  counterAsset: 'USD',
+  price: 9784.19,
+  qty: 0.100005,
+  side: 'Buy',
+  expiresIn: 5000,
+  serverTime: 1589978924762,
+  expiresAt: 1589978929762,
+  tradeKey: '1BTCUSD0.100005Buy1589978924762'
+}
+======EXECUTE QUOTE=======
+{
+  _id: '5e390a84-7617-4f72-b707-c6f895208c05',
+  createdAt: '2020-05-20T12:48:44.938Z',
+  price: 9784.19,
+  quantity: 0.100005,
+  side: 'Buy',
+  user: {
+    _id: '69c2a0e7-b82c-42ee-821f-5d9097a31823',
+    firstName: 'USER',
+    lastName: ''
+  },
+  asset: 'BTC',
+  counterAsset: 'USD',
+  status: 'Complete'
+}
+======GET LIMITS and BALANCES=======
+{
+  assets: [
+    { asset: 'BTC', maxSell: 50, maxBuy: 50, position: 6.100055 },
+    {
+      asset: 'USD',
+      maxSell: 100000,
+      maxBuy: 100000,
+      position: -59606.79569045
+    }
+  ],
+  usdBalance: -59606.79569045
+}
+======GET TRADES=======
+{
+  data: [
+    {
+      _id: '5e390a84-7617-4f72-b707-c6f895208c05',
+      createdAt: '2020-05-20T12:48:44.938Z',
+      price: 9784.19,
+      quantity: 0.100005,
+      side: 'Buy',
+      user: [Object],
+      asset: 'BTC',
+      counterAsset: 'USD',
+      status: 'Complete',
+      filledAt: '2020-05-20T12:48:44.938Z'
+    }
+  ],
+  total: 17,
+  pageCount: 17
+}
+======v4 GET QUOTE=======
+{
+  asset: 'ETH',
+  price: 0.02192152,
+  counterAsset: 'BTC',
+  qty: 0.100005,
+  side: 'buy',
+  expiresAt: 1589978929348,
+  serverTime: 1589978925404,
+  expiresIn: 3944
+}
+======v4 GET QUOTE=======
+{
+  "BTC": {
+    "levels": [
+      {
+        "sellPrice": 9754.88,
+        "buyPrice": 9784.19,
+        "maxQuantity": 2.45897109832009
+      },
+      {
+        "sellPrice": 9753.79,
+        "buyPrice": 9785.04,
+        "maxQuantity": 7.57701951992266
+      },
+      {
+        "sellPrice": 9752.88,
+        "buyPrice": 9785.93,
+        "maxQuantity": 10.136039123152104
+      },
+      {
+        "sellPrice": 9751.35,
+        "buyPrice": 9787.44,
+        "maxQuantity": 15.25408152177632
+      },
+      {
+        "sellPrice": 9750.06,
+        "buyPrice": 9788.71,
+        "maxQuantity": 20.37212652679261
+      },
+      {
+        "sellPrice": 9748.93,
+        "buyPrice": 9789.84,
+        "maxQuantity": 25.490173197437077
+      },
+      {
+        "sellPrice": 9745.68,
+        "buyPrice": 9793.08,
+        "maxQuantity": 43.4033442157963
+      },
+      {
+        "sellPrice": 9744.49,
+        "buyPrice": 9794.26,
+        "maxQuantity": 51.08041982764487
+      },
+      {
+        "sellPrice": 9741.1,
+        "buyPrice": 9797.65,
+        "maxQuantity": 76.67067771681907
+      },
+      {
+        "sellPrice": 9738.23,
+        "buyPrice": 9800.51,
+        "maxQuantity": 102.26094143406311
+      },
+      {
+        "sellPrice": 9733.43,
+        "buyPrice": 9805.32,
+        "maxQuantity": 153.4414789630643
+      },
+      {
+        "sellPrice": 9729.38,
+        "buyPrice": 9809.37,
+        "maxQuantity": 204.62202473420095
+      },
+      {
+        "sellPrice": 9725.82,
+        "buyPrice": 9812.94,
+        "maxQuantity": 255.80257577251638
+      },
+      {
+        "sellPrice": 9722.59,
+        "buyPrice": 9816.16,
+        "maxQuantity": 306.9831305522717
+      }
+    ],
+    "expiresAt": 1589978929348,
+    "expiresIn": 3798,
+    "serverTime": 1589978925550
+  },
+  "ETH": {
+    "levels": [
+      {
+        "sellPrice": 213.78,
+        "buyPrice": 214.25,
+        "maxQuantity": 116.81509009526515
+      },
+      {
+        "sellPrice": 213.6,
+        "buyPrice": 214.42,
+        "maxQuantity": 350.4452712735654
+      },
+      {
+        "sellPrice": 213.54,
+        "buyPrice": 214.49,
+        "maxQuantity": 467.2603619391199
+      },
+      {
+        "sellPrice": 213.43,
+        "buyPrice": 214.59,
+        "maxQuantity": 700.8905433375436
+      },
+      {
+        "sellPrice": 213.34,
+        "buyPrice": 214.68,
+        "maxQuantity": 934.5207247909298
+      },
+      {
+        "sellPrice": 213.26,
+        "buyPrice": 214.76,
+        "maxQuantity": 1168.1509062794398
+      },
+      {
+        "sellPrice": 213.04,
+        "buyPrice": 214.99,
+        "maxQuantity": 1985.8565416509898
+      },
+      {
+        "sellPrice": 212.95,
+        "buyPrice": 215.07,
+        "maxQuantity": 2336.30181400197
+      },
+      {
+        "sellPrice": 212.72,
+        "buyPrice": 215.31,
+        "maxQuantity": 3504.4527219619226
+      },
+      {
+        "sellPrice": 212.52,
+        "buyPrice": 215.51,
+        "maxQuantity": 4672.603630044776
+      },
+      {
+        "sellPrice": 212.18,
+        "buyPrice": 215.85,
+        "maxQuantity": 7008.90544642335
+      },
+      {
+        "sellPrice": 211.89,
+        "buyPrice": 216.13,
+        "maxQuantity": 9345.207262975731
+      },
+      {
+        "sellPrice": 211.64,
+        "buyPrice": 216.38,
+        "maxQuantity": 11681.509079639183
+      },
+      {
+        "sellPrice": 211.42,
+        "buyPrice": 216.61,
+        "maxQuantity": 14017.810896381532
+      }
+    ],
+    "expiresAt": 1589978929348,
+    "expiresIn": 3798,
+    "serverTime": 1589978925550
+  },
+  "BCH": {
+    "levels": [
+      {
+        "sellPrice": 246.39,
+        "buyPrice": 247.21,
+        "maxQuantity": 101.29630481330591
+      },
+      {
+        "sellPrice": 246.09,
+        "buyPrice": 247.51,
+        "maxQuantity": 303.8919228491756
+      },
+      {
+        "sellPrice": 245.98,
+        "buyPrice": 247.62,
+        "maxQuantity": 405.18996457697386
+      },
+      {
+        "sellPrice": 245.79,
+        "buyPrice": 247.8,
+        "maxQuantity": 607.7862530582644
+      },
+      {
+        "sellPrice": 245.64,
+        "buyPrice": 247.96,
+        "maxQuantity": 810.3827089423331
+      },
+      {
+        "sellPrice": 245.5,
+        "buyPrice": 248.09,
+        "maxQuantity": 1012.9792718060022
+      },
+      {
+        "sellPrice": 245.11,
+        "buyPrice": 248.49,
+        "maxQuantity": 1722.067734526803
+      },
+      {
+        "sellPrice": 244.96,
+        "buyPrice": 248.63,
+        "maxQuantity": 2025.962938875657
+      },
+      {
+        "sellPrice": 244.55,
+        "buyPrice": 249.04,
+        "maxQuantity": 3038.947329083734
+      },
+      {
+        "sellPrice": 244.2,
+        "buyPrice": 249.39,
+        "maxQuantity": 4051.9320936158033
+      },
+      {
+        "sellPrice": 243.62,
+        "buyPrice": 249.97,
+        "maxQuantity": 6077.902271028112
+      },
+      {
+        "sellPrice": 243.13,
+        "buyPrice": 250.46,
+        "maxQuantity": 8103.872977814489
+      },
+      {
+        "sellPrice": 242.7,
+        "buyPrice": 250.89,
+        "maxQuantity": 10129.844022900063
+      },
+      {
+        "sellPrice": 242.31,
+        "buyPrice": 251.28,
+        "maxQuantity": 12155.815308290017
+      }
+    ],
+    "expiresAt": 1589978929348,
+    "expiresIn": 3798,
+    "serverTime": 1589978925550
+  },
+  "XRP": {
+    "levels": [
+      {
+        "sellPrice": 0.2043,
+        "buyPrice": 0.2071,
+        "maxQuantity": 121546.373071133
+      },
+      {
+        "sellPrice": 0.204,
+        "buyPrice": 0.2074,
+        "maxQuantity": 364639.12089285726
+      },
+      {
+        "sellPrice": 0.2039,
+        "buyPrice": 0.2075,
+        "maxQuantity": 486185.494933626
+      },
+      {
+        "sellPrice": 0.2036,
+        "buyPrice": 0.2077,
+        "maxQuantity": 729278.2431296158
+      },
+      {
+        "sellPrice": 0.2035,
+        "buyPrice": 0.2079,
+        "maxQuantity": 972370.9914190554
+      },
+      {
+        "sellPrice": 0.2033,
+        "buyPrice": 0.2081,
+        "maxQuantity": 1215463.7397682145
+      },
+      {
+        "sellPrice": 0.2029,
+        "buyPrice": 0.2085,
+        "maxQuantity": 2066288.359265313
+      },
+      {
+        "sellPrice": 0.2027,
+        "buyPrice": 0.2087,
+        "maxQuantity": 2430927.4819900454
+      },
+      {
+        "sellPrice": 0.2023,
+        "buyPrice": 0.2091,
+        "maxQuantity": 3646391.2246155576
+      },
+      {
+        "sellPrice": 0.2019,
+        "buyPrice": 0.2095,
+        "maxQuantity": 4861854.967450029
+      },
+      {
+        "sellPrice": 0.2012,
+        "buyPrice": 0.2102,
+        "maxQuantity": 7292782.453480902
+      },
+      {
+        "sellPrice": 0.2007,
+        "buyPrice": 0.2107,
+        "maxQuantity": 9723709.939807292
+      },
+      {
+        "sellPrice": 0.2002,
+        "buyPrice": 0.2112,
+        "maxQuantity": 12154637.426322533
+      },
+      {
+        "sellPrice": 0.1998,
+        "buyPrice": 0.2116,
+        "maxQuantity": 14585564.912971916
+      }
+    ],
+    "expiresAt": 1589978929348,
+    "expiresIn": 3798,
+    "serverTime": 1589978925550
+  },
+  "XLM": {
+    "levels": [
+      {
+        "sellPrice": 0.0701,
+        "buyPrice": 0.07072,
+        "maxQuantity": 355076.67397658323
+      },
+      {
+        "sellPrice": 0.06987,
+        "buyPrice": 0.07095,
+        "maxQuantity": 1065230.0219297498
+      },
+      {
+        "sellPrice": 0.06978,
+        "buyPrice": 0.07103,
+        "maxQuantity": 1420306.695906333
+      },
+      {
+        "sellPrice": 0.06964,
+        "buyPrice": 0.07117,
+        "maxQuantity": 2130460.0438594995
+      },
+      {
+        "sellPrice": 0.06953,
+        "buyPrice": 0.07129,
+        "maxQuantity": 2840613.391812666
+      },
+      {
+        "sellPrice": 0.06942,
+        "buyPrice": 0.07139,
+        "maxQuantity": 3550766.739765832
+      },
+      {
+        "sellPrice": 0.06912,
+        "buyPrice": 0.07169,
+        "maxQuantity": 6036303.457601915
+      },
+      {
+        "sellPrice": 0.06901,
+        "buyPrice": 0.0718,
+        "maxQuantity": 7101533.479531664
+      },
+      {
+        "sellPrice": 0.0687,
+        "buyPrice": 0.07211,
+        "maxQuantity": 10652300.219297497
+      },
+      {
+        "sellPrice": 0.06844,
+        "buyPrice": 0.07238,
+        "maxQuantity": 14203066.959063329
+      },
+      {
+        "sellPrice": 0.06799,
+        "buyPrice": 0.07282,
+        "maxQuantity": 21304600.438594993
+      },
+      {
+        "sellPrice": 0.06762,
+        "buyPrice": 0.0732,
+        "maxQuantity": 28406133.918126658
+      },
+      {
+        "sellPrice": 0.06729,
+        "buyPrice": 0.07352,
+        "maxQuantity": 35507667.397658326
+      },
+      {
+        "sellPrice": 0.06699,
+        "buyPrice": 0.07382,
+        "maxQuantity": 42609200.87718999
+      }
+    ],
+    "expiresAt": 1589978929348,
+    "expiresIn": 3798,
+    "serverTime": 1589978925550
+  }
+}
+======v4 GET PRICE =======
+{
+  "ETH": {
+    "BTC": {
+      "levels": [
+        {
+          "sellPrice": 0.02189961,
+          "buyPrice": 0.02192152,
+          "maxQuantity": 116.79431197053988
+        },
+        {
+          "sellPrice": 0.02189797,
+          "buyPrice": 0.02192317,
+          "maxQuantity": 350.38293591161965
+        },
+        {
+          "sellPrice": 0.02189602,
+          "buyPrice": 0.02192512,
+          "maxQuantity": 467.1772478821595
+        },
+        {
+          "sellPrice": 0.02189275,
+          "buyPrice": 0.02192839,
+          "maxQuantity": 700.7658718232393
+        },
+        {
+          "sellPrice": 0.02188999,
+          "buyPrice": 0.02193114,
+          "maxQuantity": 934.354495764319
+        },
+        {
+          "sellPrice": 0.02188756,
+          "buyPrice": 0.02193357,
+          "maxQuantity": 1167.9431197053989
+        },
+        {
+          "sellPrice": 0.02188057,
+          "buyPrice": 0.02194056,
+          "maxQuantity": 1985.503303499178
+        },
+        {
+          "sellPrice": 0.02187803,
+          "buyPrice": 0.0219431,
+          "maxQuantity": 2335.8862394107978
+        },
+        {
+          "sellPrice": 0.02187072,
+          "buyPrice": 0.02195041,
+          "maxQuantity": 3503.8293591161964
+        },
+        {
+          "sellPrice": 0.02186455,
+          "buyPrice": 0.02195658,
+          "maxQuantity": 4671.7724788215955
+        },
+        {
+          "sellPrice": 0.02185421,
+          "buyPrice": 0.02196692,
+          "maxQuantity": 7007.658718232393
+        },
+        {
+          "sellPrice": 0.0218455,
+          "buyPrice": 0.02197564,
+          "maxQuantity": 9343.544957643191
+        },
+        {
+          "sellPrice": 0.02183781,
+          "buyPrice": 0.02198332,
+          "maxQuantity": 11679.431197053987
+        },
+        {
+          "sellPrice": 0.02183087,
+          "buyPrice": 0.02199026,
+          "maxQuantity": 14015.317436464786
+        }
+      ],
+      "expiresAt": 1589978929349,
+      "expiresIn": 3659,
+      "serverTime": 1589978925690
+    }
+  }
+}
+=====v4 Place limit order =======
+{
+  _id: '0ae423d7-bc8c-41bf-8a6f-cd3af38ad38d',
+  createdAt: '2020-05-20T12:48:45.849Z',
+  limitPrice: '0.00001',
+  price: 0,
+  quantity: 0.1,
+  side: 'Buy',
+  user: {
+    _id: '69c2a0e7-b82c-42ee-821f-5d9097a31823',
+    firstName: 'USER',
+    lastName: ''
+  },
+  asset: 'ETH',
+  counterAsset: 'BTC',
+  status: 'Open'
+}
+=====v4 Cancel Open Order =======
+{ message: 'Trade successfully cancelled.' }
+===== Blacklist Token =======
+{ message: 'Token given successfully blacklisted' }
